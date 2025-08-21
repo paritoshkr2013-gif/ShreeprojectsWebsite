@@ -43,15 +43,35 @@ document.addEventListener('keydown', function(event) {
 // Add scroll effect to navbar
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 500) {
-        navbar.style.background = 'rgba(0, 0, 0, 0.1)';
-        navbar.style.backdropFilter = 'blur(10px)';
+    if (window.scrollY > 70) {
+        navbar.style.background = 'rgba(255, 255, 255, 0.1)';
+        navbar.style.backdropFilter = 'blur(20px)';
     } else {
         navbar.style.background = 'transparent';
         navbar.style.backdropFilter = 'none';
     }
 });
-window.addEventListener('scroll', () => {
+
+// Scroll effect correction to menu
+window.addEventListener('scroll', function() {
+    const ddmt = document.querySelector('.dropdown-menu');
+    if (window.scrollY > 200) {
+        ddmt.style.background = 'rgba(0, 0, 0, 0.1)';
+        ddmt.style.backdropFilter = 'blur(10px)';
+    }
+});
+
+// Logo white bg on scroll
+window.addEventListener('scroll', function() {
+    const navlogo = document.querySelector('.navlogo');
+    if (window.scrollY > 70) {
+        navlogo.style.background = 'rgba(255, 255, 255, 1.0)';
+    } else {
+        navlogo.style.background = 'transparent';
+        navlogo.style.backdropFilter = 'none';
+    }
+});
+/*window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 500) {
         navbar.style.background = 'rgba(139, 196, 51, 1.0)';
@@ -61,7 +81,7 @@ window.addEventListener('scroll', () => {
         navbar.style.backdropFilter = 'none';
     }
 });
-
+*/
 
 // Carousel Functionality
 let slideIndex = 1;
@@ -122,7 +142,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     const subject = formData.get('subject');
     const message = formData.get('message');
 
-    // Simple validation
+    /*// Simple validation
     if (!name || !email || !subject || !message) {
         alert('Please fill in all required fields.');
         return;
@@ -133,7 +153,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     if (!emailRegex.test(email)) {
         alert('Please enter a valid email address.');
         return;
-    }
+    }*/
 
     // Simulate form submission
     alert('Thank you for your message! We will get back to you soon.');

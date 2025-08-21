@@ -44,7 +44,7 @@ body {
     width: 100%;
     z-index: 1000;
     padding: 1rem 0;
-    transition: all 0.3s ease;
+    transition: all 1.1s ease;
 }
 
 .nav-container {
@@ -57,19 +57,20 @@ body {
     position: relative;
 }
 
-.nav-logo {
-    color: #ffffff;
+.navlogo {
+    /*color: #ffffff;*/
     background: #ffffff;
     border-radius: 10px;
+    transition: all 1.1s ease;
 }
 
-.nav-logo img {
+.navlogo img {
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 0.2rem;
     padding-top: 0.5rem;
 }
-.nav-logo a {
+.navlogo a {
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
@@ -131,6 +132,7 @@ body {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    backdrop-filter: blur(10px);
 }
 
 .menu-list {
@@ -380,15 +382,15 @@ body {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,1);
     cursor: pointer;
     transition: all 0.3s;
-    border: 2px solid transparent;
+    border: 2px solid #0087FF;
 }
 
 .dot.active {
-    background: white;
-    border-color: rgba(255,255,255,0.5);
+    background: #0087FF;
+    border-color: #8AB941;
     transform: scale(1.2);
 }
 
@@ -531,43 +533,42 @@ body {
     margin-bottom: 1rem;
 }
 
-/* Subsidy */
+
+/*Subsidy*/
 .subsidy {
     background-image: url("bg2a.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    padding-bottom: 2rem;
+    background-color: #868686;
     padding-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    padding-bottom: 1rem;
 }
 
-.subsidyblock {
+.subsidygrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    place-content: center;
 }
 
-.subsidy-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding-left: 7rem;
-    padding-right: 7rem;
+.subsidyhead {
+    text-align: center;
+    /*max-width: 500px;*/
 }
+
 
 .subsidy h2{
     color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
 }
 
 .subsidy h3{
     color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
-
 
 /* Our Solutions */
 
@@ -801,8 +802,6 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    align-items: center;
-    align-self: center;
 }
 
 .submit-btn:hover {
@@ -989,9 +988,5 @@ body {
     }
     .nav-container {
         padding: 0 15px;
-    }
-    
-    .nav-logo h2 {
-        font-size: 1.5rem;
     }
 }
