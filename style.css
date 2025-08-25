@@ -235,22 +235,22 @@ body {
 .carousel-section {
     position: relative;
     height: 100vh;
-    min-height: 600px;
+    /*min-height: 600px;*/
     overflow: hidden;
 }
 
 .carousel-container {
-    position: relative;
+    /*position: relative;
     width: 100%;
-    height: 100%;
+    height: 100%;*/
 }
 
 .carousel-slide {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    /*width: fit-content;
+    height: fit-content;*/
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
@@ -733,7 +733,7 @@ body {
 
 .contact-form {
     align-items: center;
-    background: #aaaaaa;
+    background: #cfcfcf;
     padding: 2rem;
     border-radius: 10px;
     padding-bottom: 2rem;
@@ -760,11 +760,11 @@ body {
 .form-group input,
 .form-group textarea {
     padding: 12px;
-    border: 2px solid #FF9254;
+    border: 2px solid #9e9e9e;
     border-radius: 10px;
     font-size: 1rem;
     transition: border-color 0.3s;
-    background: #4a90e2;
+    background: #ffffff;
     width: 350px;
     max-width: 350px;
 }
@@ -937,14 +937,9 @@ body {
 
 @media (max-width: 480px) {
     .carousel-section {
-        width:fit-content;
-        
+        margin-top: 70px;
+        width: 100vw;
     }
-    
-    .carousel-content {
-        width:fit-content;
-    }
-
     .carousel-content h2 {
         font-size: 2rem;
     }
@@ -978,6 +973,43 @@ body {
         right: 15px;
     }
     
+    
+.contact-form {
+    width: 70%;
+    max-width: 70%;
+    align-items: center;
+    align-self: start;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    width: 5rem;
+    align-items: center;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #002F69;
+    font-size: large;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 2px solid #9e9e9e;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    background: #ffffff;
+    width: 270px;
+    /*max-width: 65%;*/
+}
+
+
     .features,
     .services-grid,
     .portfolio-grid,

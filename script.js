@@ -116,6 +116,24 @@ function showSlide(n) {
     dots[slideIndex - 1].classList.add('active');
 }
 
+function setCarouselSectionHeight() {
+    // Find the active slide image
+    const activeSlide = document.querySelector('.carousel-slide.active img');
+    const carouselSection = document.querySelector('.carousel-section');
+    if (activeSlide && carouselSection) {
+        // Get image height after it loads
+        carouselSection.style.height = activeSlide.offsetHeight + 'px';
+    }
+}
+
+// Run on page load and whenever the slide changes
+window.addEventListener('load', setCarouselSectionHeight);
+window.addEventListener('resize', setCarouselSectionHeight);
+
+// If you have a carousel change event, call setCarouselSectionHeight() after slide changes
+
+
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
